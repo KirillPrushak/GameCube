@@ -11,7 +11,7 @@ namespace DefaultNamespace
         private void Awake()
         {
             if (Instance != null)
-            {
+            { 
                 Destroy(Instance.gameObject);
                 return;
             }
@@ -23,6 +23,5 @@ namespace DefaultNamespace
             Debug.Log("Player Died");
             _isDead = true;
         }
-        
     }
 }
