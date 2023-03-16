@@ -5,10 +5,19 @@ namespace DefaultNamespace
 {
     public class KillPlain : MonoBehaviour
     {
-        [SerializeField] private string _player;
-        private void OnCollisionEnter(Collision collision)
+        [SerializeField] private string _playerTag;
+        // private void OnCollisionEnter(Collision collision)
+        // {
+        //     if (collision.gameObject.CompareTag(_playerTag))
+        //     {
+        //         GameStateManager.Instance.Die();
+        //         Destroy(collision.gameObject);
+        //     }
+        // }
+
+        private void OnTriggerEnter(Collider collision)
         {
-            if (collision.gameObject.CompareTag(_player))
+            if (collision.gameObject.CompareTag(_playerTag))
             {
                 GameStateManager.Instance.Die();
                 Destroy(collision.gameObject);
