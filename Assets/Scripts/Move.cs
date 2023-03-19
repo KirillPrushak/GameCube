@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UIElements;
-
 public class Move : MonoBehaviour
 {
     [SerializeField] private float _rollSpeed = 5f;
@@ -17,38 +17,22 @@ public class Move : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
-
-    private void Update()
+    
+    public void Moves(Vector3 direction)
     {
         if (_isMoving) return;
+        var isGrounded = BlockChecker.CheckIsGrounded(transform.position);
+        if (!isGrounded)
+        {
+            return;
+        }
         
-        if (Input.GetKey(KeyCode.A))
-        {
-            Moves(Vector3.left);
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            Moves(Vector3.right);
-        }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            Moves(Vector3.forward);
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            Moves(Vector3.back);
-        }
-    }
-
-    private void Moves(Vector3 direction)
-    {
         var verticalComponent = Vector3.down;
-        var hasWall = HasWallInDerection(direction);
+        var hasWall = BlockChecker.HasBlocknInDerection(transform.position ,direction);
         if (hasWall)
         {
             verticalComponent = Vector3.up;
         }
-        
         _vectorPoint = (direction / 2f) + (Vector3.down / 2f) + transform.position;
         _axis = Vector3.Cross(Vector3.up, direction);//перпендикуляр к плоскости (ось объекта)
         //var position = transform.position;//текущая позиция
@@ -57,12 +41,6 @@ public class Move : MonoBehaviour
 
         StartCoroutine(Roll(_vectorPoint, _axis));
     }
-
-    private bool HasWallInDerection (Vector3 direction)
-    {
-        return Physics.Raycast(transform.position, direction, 0.51f);
-    }
-
     private IEnumerator Roll(Vector3 pivot, Vector3 axis)
     {
         _isMoving = true;
@@ -76,6 +54,8 @@ public class Move : MonoBehaviour
 
         _rigidbody.isKinematic = false;
         _isMoving = false;
+
+        BlockChecker.SnapPositionToInteger(transform);
     }
     private void OnDrawGizmos()
     {
