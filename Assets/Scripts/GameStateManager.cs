@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class GameStateManager:MonoBehaviour
+    public class GameStateManager : MonoBehaviour
     {
         public static GameStateManager Instance;
         private bool _isDead = false;
@@ -11,7 +11,7 @@ namespace DefaultNamespace
         private void Awake()
         {
             if (Instance != null)
-            { 
+            {
                 Destroy(Instance.gameObject);
                 return;
             }
