@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Behaviours/CinemachineBrain.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -21,6 +24,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.5538462",
     "settings.editor.selected.configurable": "CodeLensConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
@@ -79,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678995359987</updated>
       <workItem from="1678995398686" duration="6517000" />
-      <workItem from="1679222321449" duration="19286000" />
+      <workItem from="1679222321449" duration="26011000" />
     </task>
     <servers />
   </component>

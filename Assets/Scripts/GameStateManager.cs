@@ -7,6 +7,7 @@ namespace DefaultNamespace
     {
         public static GameStateManager Instance;
         private bool _isDead = false;
+        private GameObject _player;
 
         private void Awake()
         {
@@ -18,9 +19,14 @@ namespace DefaultNamespace
             Instance = this;
         }
 
+        private void Start()
+        {
+            _player = FindObjectOfType<PlayerInput>().gameObject;
+        }
+
         public void Die()
         {
-            Debug.Log("Player Died");
+            Destroy(FindObjectOfType<PlayerInput>().gameObject);
             _isDead = true;
         }
     }
