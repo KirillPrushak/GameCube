@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace.EventObjects;
 using UnityEngine;
- 
- public class ButtonEventController : MonoBehaviour
+using UnityEngine.Serialization;
+
+public class ButtonEventController : MonoBehaviour
  {
      [SerializeField] private string _playerTag = "Player";
      [SerializeField] private MovingPlatform _platform;
@@ -36,7 +38,7 @@ using UnityEngine;
      IEnumerator Moving()
      {
          _isMoving = true;
-         yield return new WaitForSeconds(1f);
+         yield return new WaitForSeconds(0.2f);
          _isMoving = false;
      }
  
