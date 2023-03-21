@@ -57,10 +57,10 @@ public class Move : MonoBehaviour
 
         BlockChecker.SnapPositionToInteger(transform);
     }
-    // private void OnDrawGizmos()
-    // {
-    //     Gizmos.color = Color.red;
-    //     Gizmos.DrawSphere(_vectorPoint, 0.2f);
-    //     Gizmos.DrawRay(_vectorPoint, _axis);
-    // }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(_vectorPoint, 0.2f);
+        Gizmos.DrawRay(_vectorPoint, _axis);
+    }
 }
