@@ -18,7 +18,7 @@ namespace DefaultNamespace
         private void Pick()
         {
             PickupManager.Instance.AddMoney(_bonusAmount);
-
+            Destroy(gameObject);
         }
     }
 }

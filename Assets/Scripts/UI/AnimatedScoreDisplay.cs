@@ -19,6 +19,11 @@ namespace DefaultNamespace.UI
             
             Animate(startAmount, targetAmount);
         }
+
+        public void Set(int value)
+        {
+            _countText.text = value.ToString();
+        }
         public void Animate(int from, int to)
         {
             _countText.text = from.ToString();

@@ -1,4 +1,5 @@
-﻿using DefaultNamespace.UI;
+﻿using System;
+using DefaultNamespace.UI;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -7,9 +8,15 @@ namespace DefaultNamespace
     {
         [SerializeField] private int _currentPlayerAmount;
         [SerializeField] private AnimatedScoreDisplay _scoreDisplay;
+
+        private void Start()
+        {
+            _scoreDisplay.Set(_currentPlayerAmount);
+        }
+
         public void AddMoney(int amount)
         {
-            _scoreDisplay.Animate(_currentPlayerAmount, _currentPlayerAmount);
+            _scoreDisplay.Animate(_currentPlayerAmount, _currentPlayerAmount + amount);
             
             _currentPlayerAmount += amount;
         }

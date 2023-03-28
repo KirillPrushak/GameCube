@@ -16,7 +16,7 @@ namespace DefaultNamespace
 
         public void Die()
         {
-            Destroy(FindObjectOfType<PlayerInput>().gameObject);
+            Destroy(_player);
             _isDead = true;
         }
     }
