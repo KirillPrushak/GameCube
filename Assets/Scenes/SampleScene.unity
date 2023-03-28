@@ -2468,6 +2468,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377722228433047520, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
+      propertyPath: _bonusAmount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 377722228433047527, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -3088,6 +3092,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377722228433047520, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
+      propertyPath: _bonusAmount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 377722228433047527, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -4589,6 +4597,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377722228433047520, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
+      propertyPath: _bonusAmount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 377722228433047527, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -4967,8 +4979,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaebc74e8c0c48f7aa7f3c2a9f82eae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentPlayerAmount: 0
+  _currentPlayerAmount: 400
   _scoreDisplay: {fileID: 2009165970}
+--- !u!114 &931292731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931292726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c0447689f04ed0957b379c14507ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cointPrefab: {fileID: 5098965403485883545, guid: 0778d530cc9261f4c9c2a1bb3a270939, type: 3}
+  _canvas: {fileID: 1730795462}
+  _scoreDisplay: {fileID: 2009165970}
+  _animationDuration: 1
+  _spread: 400
 --- !u!1001 &952935394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5141,7 +5170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5e1ff9804fca3ec4db36ac8ad073b179, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fd168cc03dc2bf43b417cc3576c06ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7388,6 +7417,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377722228433047520, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
+      propertyPath: _bonusAmount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 377722228433047527, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -11210,6 +11243,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377722228433047520, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
+      propertyPath: _bonusAmount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 377722228433047527, guid: 44b4cd346c3daeb44906253af3bebace, type: 3}
       propertyPath: m_RootOrder
       value: 13

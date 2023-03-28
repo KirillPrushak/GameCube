@@ -18,7 +18,10 @@ namespace DefaultNamespace
         private void Pick()
         {
             PickupManager.Instance.AddMoney(_bonusAmount);
+            CoinAnimationManager.Instance.Animate(_bonusAmount, transform.position);
             Destroy(gameObject);
         }
+        
+        
     }
 }
