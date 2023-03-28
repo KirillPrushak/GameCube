@@ -3,22 +3,12 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class GameStateManager : MonoBehaviour
+    public class GameStateManager : SingletonMonoBehaviour<GameStateManager>
     {
-        public static GameStateManager Instance;
+
         private bool _isDead = false;
         private GameObject _player;
-
-        private void Awake()
-        {
-            if (Instance != null)
-            {
-                Destroy(Instance.gameObject);
-                return;
-            }
-            Instance = this;
-        }
-
+        
         private void Start()
         {
             _player = FindObjectOfType<PlayerInput>().gameObject;
